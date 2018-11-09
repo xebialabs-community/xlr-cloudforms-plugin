@@ -1,0 +1,12 @@
+.gradle
+.idea
+build
+supervisord.*
+out
+*$py.class
+*.iml
+gradle.properties
+itest-conf.json
+xl-release-*-server/
+xl-release-8.2.0-server
+.DS_Store

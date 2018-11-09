@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+
+    Copyright 2018 XEBIALABS
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+-->
+<synthetic xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd" xmlns="http://www.xebialabs.com/deployit/synthetic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <type type="cloudforms.Server" extends="configuration.HttpConnection">
+    <property name="checkConfigurationPath" hidden="true" default="/api"/>
+    <property name="checkConfigurationContentType" hidden="true" default="application/json"/>
+    <property name="scriptLocation" hidden="true" default="configuration/HttpConnectionCheck.py"/>
+  </type>
+
+  <type type="cloudforms.StartService" extends="xlrelease.PythonScript" label="Start Service">
+    <property name="cloudformsServer"  category="input" label="Server" referenced-type="cloudforms.Server" kind="ci"/>
+    <property name="serviceTemplate"     category="input"/>
+    <property name="serviceRequestsId"     category="output"/>
+    <property name="serviceRequestState"     category="output"/>
+    <property name="serviceRequestMessage"     category="output"/>
+    <property name="taskColor" hidden="true" default="#cc0000" />
+    <property name="iconLocation" required="false" hidden="true" default="cloudforms/redhat.png" />
+  </type>
+
+</synthetic>
