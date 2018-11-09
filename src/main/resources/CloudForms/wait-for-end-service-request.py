@@ -15,11 +15,12 @@ if cloudformsServer is None:
     print "No cloudform server provided."
     sys.exit(1)
 
-headers= {"Accept":"application/json","Content-Type":"application/json"}
-service_template_url = "{0}/api/service_requests/{1}".format(cloudformsServer['url'],serviceRequestsId)
-#print('* url: {0}'.format(service_template_url))
+headers = {"Accept": "application/json", "Content-Type": "application/json"}
+service_template_url = "{0}/api/service_requests/{1}".format(cloudformsServer['url'], serviceRequestsId)
+# print('* url: {0}'.format(service_template_url))
 
-r = requests.get(service_template_url, headers=headers, verify=False, auth=(cloudformsServer['username'], cloudformsServer['password']))
+r = requests.get(service_template_url, headers=headers, verify=False,
+                 auth=(cloudformsServer['username'], cloudformsServer['password']))
 if r.status_code == requests.codes.ok:
     response = r.json()
     serviceRequestsId = response['id']
@@ -32,6 +33,4 @@ if r.status_code == requests.codes.ok:
     else:
         task.schedule("cloudforms/wait-for-end-service-request.py")
 else:
-    raise Exception("%s: HTTP response code %s (%s)" % (service_template_url,r.status_code, r.json()))
-
-
+    raise Exception("%s: HTTP response code %s (%s)" % (service_template_url, r.status_code, r.json()))
