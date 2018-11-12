@@ -19,7 +19,7 @@
         <property name="scriptLocation" hidden="true" default="configuration/Check.py"/>
     </type>
 
-    <type type="cloudforms.Check" extends="xlrelease.PythonScript" label="Check">
+    <type type="cloudforms.Check" extends="xlrelease.PythonScript" label="Check CFME Service">
         <property name="cloudformsServer" category="input" label="Server" referenced-type="cloudforms.Server"
                   kind="ci"/>
         <property name="taskColor" hidden="true" default="#cc0000"/>
