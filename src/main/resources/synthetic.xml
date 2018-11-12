@@ -16,7 +16,14 @@
     <type type="cloudforms.Server" extends="configuration.HttpConnection">
         <property name="checkConfigurationPath" hidden="true" default="/api"/>
         <property name="checkConfigurationContentType" hidden="true" default="application/json"/>
-        <property name="scriptLocation" hidden="true" default="configuration/HttpConnectionCheck.py"/>
+        <property name="scriptLocation" hidden="true" default="configuration/Check.py"/>
+    </type>
+
+    <type type="cloudforms.Check" extends="xlrelease.PythonScript" label="Check">
+        <property name="cloudformsServer" category="input" label="Server" referenced-type="cloudforms.Server"
+                  kind="ci"/>
+        <property name="taskColor" hidden="true" default="#cc0000"/>
+        <property name="iconLocation" required="false" hidden="true" default="cloudforms/redhat.png"/>
     </type>
 
     <type type="cloudforms.StartService" extends="xlrelease.PythonScript" label="Start Service">
