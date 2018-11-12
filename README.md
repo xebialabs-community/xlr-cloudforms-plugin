@@ -1,4 +1,4 @@
-# XL Deploy|Release Description|Interface plugin v1.0.0
+# XL Release CloudForms plugin v1.0.0
 
 [![Build Status][xlr-cloudforms-plugin-travis-image]][xlr-cloudforms-plugin-travis-url]
 [![License: MIT][xlr-cloudforms-plugin-license-image]][xlr-cloudforms-plugin-license-url]
@@ -12,10 +12,8 @@
 
 ## Preface
 
-This document describes the functionality provided by the XL Deploy|Release Description|Interface plugin.
+This document describes the functionality provided by the XL Release CloudForm plugin.
 
-See the [XL Deploy reference manual](https://docs.xebialabs.com/xl-deploy) for background information on XL Deploy and deployment automation concepts.  
-or  
 See the [XL Release reference manual](https://docs.xebialabs.com/xl-release) for background information on XL Release and release automation concepts.  
 
 ## Overview
@@ -26,10 +24,13 @@ Note:  XLD or XLR version should not be lower than lowest supported version.  Se
 
 ## Installation
 
-* Copy the latest JAR file from the [releases page](https://github.com/xebialabs-community/xlr-cloudforms-plugin/releases) into the `XL_DEPLOY|RELEASE_SERVER/plugins` directory.
-* Restart the XL Deploy|Release server.
+* Copy the latest JAR file from the [releases page](https://github.com/xebialabs-community/xlr-cloudforms-plugin/releases) into the `XL_RELEASE_SERVER/plugins` directory.
+* Restart the XL Release server.
 
-## Features/Usage/Types/Tasks
+## XLRelease Tasks
+
+* Check CFME Service: check if the CloudForm Service is available
+* Start Service: Request a new Service from a service template ID and wait for its end.
 
 ## References
 
