@@ -23,7 +23,7 @@
         <property name="cloudformsServer" category="input" label="Server" referenced-type="cloudforms.Server"
                   kind="ci"/>
         <property name="taskColor" hidden="true" default="#cc0000"/>
-        <property name="iconLocation" required="false" hidden="true" default="cloudforms/redhat.png"/>
+        <property name="iconLocation" required="false" hidden="true" default="logo/redhat.png"/>
     </type>
 
     <type type="cloudforms.StartService" extends="xlrelease.PythonScript" label="Start Service">
@@ -34,7 +34,7 @@
         <property name="serviceRequestState" category="output"/>
         <property name="serviceRequestMessage" category="output"/>
         <property name="taskColor" hidden="true" default="#cc0000"/>
-        <property name="iconLocation" required="false" hidden="true" default="cloudforms/redhat.png"/>
+        <property name="iconLocation" required="false" hidden="true" default="logo/redhat.png"/>
     </type>
 
 </synthetic>
